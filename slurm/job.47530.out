@@ -1,0 +1,34 @@
+Job ID: 47530
+Job is running on node: node02
+Allocated GPUs: 0
+Loading modules...
+---------------------------- /cm/shared/modulefiles ----------------------------
+cudnn7.6-cuda10.2/7.6.5.32  cudnn8.4-cuda11.4/8.4.1.50  
+cudnn8.0-cuda11.1/8.0.5.39  cudnn8.5-cuda11.7/8.5.0.96  
+cudnn8.1-cuda11.2/8.1.1.33  
+Activating conda environment...
+Python executable: /home/lizhaolab/.conda/envs/keras/bin/python
+NVIDIA SMI output:
+Tue Sep 16 22:25:06 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 3090    On   | 00000000:81:00.0 Off |                  N/A |
+| 30%   27C    P8    16W / 350W |      0MiB / 24268MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Starting the training script...
+python: can't open file '/home/lizhaolab/ct_seg/scripts/convert_masks_to_single': [Errno 2] No such file or directory
+Job finished.

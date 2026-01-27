@@ -1,0 +1,30 @@
+Job ID: 47686
+Job is running on node: node01
+Allocated GPUs: 0
+Loading modules...
+---------------------------- /cm/shared/modulefiles ----------------------------
+cudnn7.6-cuda10.2/7.6.5.32  cudnn8.4-cuda11.4/8.4.1.50  
+cudnn8.0-cuda11.1/8.0.5.39  cudnn8.5-cuda11.7/8.5.0.96  
+cudnn8.1-cuda11.2/8.1.1.33  
+Activating conda environment...
+Python executable: /home/lizhaolab/.conda/envs/keras/bin/python
+NVIDIA SMI output:
+No devices were found
+Starting the training script...
+2025-09-17 21:27:50.443661: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-17 21:27:50.606818: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-09-17 21:27:51.719410: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cm/shared/apps/cudnn8.1-cuda11.2/8.1.1.33/lib64:/cm/shared/apps/cuda11.2/toolkit/11.2.0/targets/x86_64-linux/lib:/cm/shared/apps/cudnn8.0-cuda11.1/8.0.5.39/lib64:/cm/shared/apps/anaconda3/lib:/cm/local/apps/cuda/libs/current/lib64:/cm/shared/apps/cuda11.1/toolkit/11.1.1/targets/x86_64-linux/lib:/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64:/cm/local/apps/gcc/9.2.0/lib:/cm/local/apps/gcc/9.2.0/lib64
+2025-09-17 21:27:51.719537: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cm/shared/apps/cudnn8.1-cuda11.2/8.1.1.33/lib64:/cm/shared/apps/cuda11.2/toolkit/11.2.0/targets/x86_64-linux/lib:/cm/shared/apps/cudnn8.0-cuda11.1/8.0.5.39/lib64:/cm/shared/apps/anaconda3/lib:/cm/local/apps/cuda/libs/current/lib64:/cm/shared/apps/cuda11.1/toolkit/11.1.1/targets/x86_64-linux/lib:/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64:/cm/local/apps/gcc/9.2.0/lib:/cm/local/apps/gcc/9.2.0/lib64
+2025-09-17 21:27:51.719547: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2025-09-17 21:27:53.514301: E tensorflow/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-09-17 21:27:53.514351: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: node01
+2025-09-17 21:27:53.514358: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: node01
+2025-09-17 21:27:53.514426: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 550.127.5
+2025-09-17 21:27:53.514452: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 550.127.5
+2025-09-17 21:27:53.514458: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 550.127.5
+2025-09-17 21:27:53.514797: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Train From Scratch
+Epoch 1/10
+  1/353 [..............................] - ETA: 14:41:40 - loss: 0.9169 - dice_coefficient: 0.2604  2/353 [..............................] - ETA: 13:59:11 - loss: 0.9305 - dice_coefficient: 0.2483  3/353 [..............................] - ETA: 13:57:20 - loss: 0.9290 - dice_coefficient: 0.2487slurmstepd: error: *** JOB 47686 ON node01 CANCELLED AT 2025-09-17T21:36:44 ***

@@ -1,0 +1,46 @@
+Job ID: 47688
+Job is running on node: node04
+Allocated GPUs: 0
+Loading modules...
+---------------------------- /cm/shared/modulefiles ----------------------------
+cudnn7.6-cuda10.2/7.6.5.32  cudnn8.4-cuda11.4/8.4.1.50  
+cudnn8.0-cuda11.1/8.0.5.39  cudnn8.5-cuda11.7/8.5.0.96  
+cudnn8.1-cuda11.2/8.1.1.33  
+Activating conda environment...
+Python executable: /home/lizhaolab/.conda/envs/keras/bin/python
+NVIDIA SMI output:
+Wed Sep 17 23:00:18 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 3090    On   | 00000000:41:00.0 Off |                  N/A |
+| 30%   30C    P8    18W / 350W |      2MiB / 24268MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Starting the training script...
+2025-09-17 23:00:19.004375: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-17 23:00:19.335651: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-09-17 23:00:20.572500: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cm/shared/apps/cudnn8.1-cuda11.2/8.1.1.33/lib64:/cm/shared/apps/cuda11.2/toolkit/11.2.0/targets/x86_64-linux/lib:/cm/shared/apps/cudnn8.0-cuda11.1/8.0.5.39/lib64:/cm/shared/apps/anaconda3/lib:/cm/local/apps/cuda/libs/current/lib64:/cm/shared/apps/cuda11.1/toolkit/11.1.1/targets/x86_64-linux/lib:/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64:/cm/local/apps/gcc/9.2.0/lib:/cm/local/apps/gcc/9.2.0/lib64
+2025-09-17 23:00:20.572626: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cm/shared/apps/cudnn8.1-cuda11.2/8.1.1.33/lib64:/cm/shared/apps/cuda11.2/toolkit/11.2.0/targets/x86_64-linux/lib:/cm/shared/apps/cudnn8.0-cuda11.1/8.0.5.39/lib64:/cm/shared/apps/anaconda3/lib:/cm/local/apps/cuda/libs/current/lib64:/cm/shared/apps/cuda11.1/toolkit/11.1.1/targets/x86_64-linux/lib:/cm/shared/apps/slurm/current/lib64/slurm:/cm/shared/apps/slurm/current/lib64:/cm/local/apps/gcc/9.2.0/lib:/cm/local/apps/gcc/9.2.0/lib64
+2025-09-17 23:00:20.572634: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2025-09-17 23:00:22.609940: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-17 23:00:23.455787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22296 MB memory:  -> device: 0, name: GeForce RTX 3090, pci bus id: 0000:41:00.0, compute capability: 8.6
+Traceback (most recent call last):
+  File "/home/lizhaolab/ct_seg/scripts/train_bbunet.py", line 61, in <module>
+    model.compile(optimizer = Adam(learning_rate = float(LR)), loss = loss_fn, metrics = [dice_coefficient])
+NameError: name 'dice_coefficient' is not defined
+Job finished.
