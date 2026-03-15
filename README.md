@@ -5,4 +5,4 @@
 2. 内含unet,simple_nestnet,nestnet with backbone三种模型选择
 
 下面是经过训练后模型分割的实例：
-
+![example](./doc/val_000_03_ID00007637202177411956430_11.png)
