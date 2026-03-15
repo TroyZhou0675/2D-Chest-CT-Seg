@@ -5,7 +5,7 @@
 
 A deep learning project for 2D thoracic organ segmentation in CT scans. This repository supports training from scratch using custom images and masks.
 
-## 🌟 Key Features
+## Key Features
 
 - **Training from Scratch**: Full pipeline for training on your own CT datasets.
 - **Data Processing**: 
@@ -16,7 +16,7 @@ A deep learning project for 2D thoracic organ segmentation in CT scans. This rep
   - `Simple_NestNet` (UNet++)
   - `NestNet with Backbone`
 
-## 📊 Segmentation Results
+## Segmentation Results
 
 Here is an example of the model's performance after training:
 
@@ -25,7 +25,7 @@ Here is an example of the model's performance after training:
   <p><i>Figure 1: Comparison between Original CT and Segmented Masks</i></p>
 </div>
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Prepare Data**: Place your 256x256 grayscale images and RGB masks in the data folder.
 2. **Preprocessing**: Use the internal script to convert RGB masks to label maps.
